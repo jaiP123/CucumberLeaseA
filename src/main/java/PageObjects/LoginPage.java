@@ -34,11 +34,9 @@ public class LoginPage {
 
     // Methods
     public void clickLogin() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable (By.xpath("//span[contains(.,'Hello, sign in')]")));
-        //WebElement SignBtn = driver.findElement(signInLocator);
-       // SignBtn.click();
-        driver.findElement(By.xpath("//span[contains(.,'Hello, sign in')]")).click();
+        WebElement SignBtn = driver.findElement(signInLocator);
+        SignBtn.click();
+
     }
 
     public void enterEmail(String email) {
